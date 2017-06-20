@@ -1,0 +1,8 @@
+#name;descr;context;desingValue
+####################################################################################
+##########################DRIFT PANEL - CHECKS AFTER MESH ASSEMBLY##################
+####################################################################################
+Drift Panel - Mesh Frame Grounding (Electrical contact Vs frames);Drift Panel - Mesh Frame Grounding (Electrical contact Vs frames);DP_MF_GROUND_DT;Pass
+Drift Panel - Interconnection (Drift Spacer) Height;Drift Panel - Interconnection (Drift Spacer) Height;DP_DSPAC_HEIGHT_DT;1
+Drift Panel - Mesh quality of gluing on mesh frame;Drift Panel - Mesh quality of gluing on mesh frame;DP_MESH_QUAL_GLUING_DT;Pass
+Drift Panel - Mesh inspection after hole punching;Drift Panel - Mesh inspection after hole punching;DP_MESH_INSP_HOLE_PUNCH_DT;Pass 

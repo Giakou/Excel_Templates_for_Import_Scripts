@@ -1,0 +1,9 @@
+#name;descr;context;desingValue
+####################################################################################
+##########################DRIFT PANELS - ELECTRICAL TESTS###########################
+####################################################################################
+Drift Panel - Electrical continuity of Honeycomb pieces with frames;Drift Panel - Electrical continuity of Honeycomb pieces with frames;DP_CONT_HC_FR_FLAG_DT;Pass
+Drift Panel - Electrical continuity between cathodes;Drift Panel - Electrical continuity between cathodes;DP_CONT_CATH_FLAG_DT;Pass
+Drift Panel - HV Connector Connection to Cathodes;Drift Panel - HV Connector Connection to Cathodes;DP_HV_CONTACT_FLAG_DT;Pass
+Drift Panel - Quality of soldering (cleaning);Drift Panel - Quality of soldering (cleaning);DP_HV_SOLD_QUAL_FLAG_DT;Pass
+Drift Panel - Cathodes INSULATION from all other metallic parts;Drift Panel - Cathodes INSULATION from all other metallic parts;DP_CATH_METAL_INS_FLAG_DT;Pass

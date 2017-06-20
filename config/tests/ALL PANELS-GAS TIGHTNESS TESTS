@@ -1,0 +1,6 @@
+#name;descr;context;desingValue
+####################################################################################
+##########################ALL PANELS-GAS TIGHTNESS TESTS##########
+####################################################################################
+All Panels - Overpressure Gas Tightness Value;All Panels - Overpressure Gas Tighness Value;ALL_PAN_GAS_TIGHT_VALUE_DT;1
+All Panels - Overpressure Gas Tightness Curve;All Panels - Overpressure Gas Tighness Curve;ALL_PAN_GAS_TIGHT_CURVE_DT;map

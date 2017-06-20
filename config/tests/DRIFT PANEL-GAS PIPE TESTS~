@@ -1,0 +1,7 @@
+#name;descr;context;desingValue
+####################################################################################
+##########################DRIFT PANELS - GAS PIPE TESTS#############################
+####################################################################################
+Drift Panel - Electrical Continuity of the gas pipe with the mesh frame-flag;Drift Panel - Electrical Continuity of the gas pipe with the mesh frame-flag;DP_GAS_PIPE_MESH_FR_CONT_DT;Pass
+Drift Panel - Check gas flow from all holes;Drift Panel - Check gas flow from all holes;DP_GAS_FLOW_CHECK_DT;Pass
+
