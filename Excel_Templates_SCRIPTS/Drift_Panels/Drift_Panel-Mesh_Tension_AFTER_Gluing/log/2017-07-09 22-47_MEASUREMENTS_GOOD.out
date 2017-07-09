@@ -1,0 +1,5 @@
+o MESSAGE: 10.75, TO_TIMESTAMP -2017-06-22 12:00:00, YYYY-MM-DD HH24:MI:SS-, ggiakous, , ggiakous, Giannis, T, MESH_TENS_AG_MIN_DT, 5383, skfh_1 inserted
+o MESSAGE: 15.55, TO_TIMESTAMP -2017-06-22 12:00:00, YYYY-MM-DD HH24:MI:SS-, ggiakous, , ggiakous, Giannis, T, MESH_TENS_AG_MAX_DT, 5383, skfh_1 inserted
+o MESSAGE: 12.12, TO_TIMESTAMP -2017-06-22 12:00:00, YYYY-MM-DD HH24:MI:SS-, ggiakous, , ggiakous, Giannis, T, MESH_TENS_AG_AVG_DT, 5383, skfh_1 inserted
+o MESSAGE: 1.3641461567, TO_TIMESTAMP -2017-06-22 12:00:00, YYYY-MM-DD HH24:MI:SS-, ggiakous, , ggiakous, Giannis, T, MESH_TENS_AG_RMS_DT, 5383, skfh_1 inserted
+o MESSAGE: auth: !!! COMMIT +++++ COMMIT +++++ COMMIT +++++ COMMIT +++++ COMMIT +++++ COMMIT !!!

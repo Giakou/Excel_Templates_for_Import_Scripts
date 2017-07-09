@@ -2,37 +2,23 @@
 import xlrd
 from datetime import datetime
 
-workbook =  xlrd.open_workbook('Drift_Panel-Mesh_Frame_Height_2895.xls')
+workbook =  xlrd.open_workbook('Drift_Panel-Mesh_Frame_Height_5384_side_1.xls')
 sheet = workbook.sheet_by_name('Sheet1')
-csvfile = open('Drift_Panel-Mesh_Frame_Height.csv', 'wb')
-"""
-writecsv = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-a=['MEASSITEHASH','EQENTRYID','CONTEXTNAME','MEASVALUE','PERCENTAGEMEAS','ISVALIDFLAG','INDEXHASH','MEASTIME','SHIFTER','WEBSITEUSERCR']
-b=['',x1.cell(5,0).value,'DT_PAN_PLAN_MIN',x1.cell(29, 0).value,'','T','skfh_1',x1.cell(5,2).ctype,x1.cell(5,4).value,'ggiakous']
-c=['',x1.cell(5,0).value,'DT_PAN_PLAN_MAX',x1.cell(29,2).value,'','T','skfh_1',x1.cell(5,2).value,x1.cell(5,4).value,'ggiakous']
-d=['',x1.cell(5,0).value,'DT_PAN_PLAN_AVG',x1.cell(29,4).value,'','T','skfh_1',x1.cell(5,2).value,x1.cell(5,4).value,'ggiakous']
-e=['',x1.cell(5,0).value,'DT_PAN_PLAN_RMS',x1.cell(29,6).value,'','T','skfh_1',x1.cell(5,2).value,x1.cell(5,4).value,'ggiakous']
-writecsv.writerow(a)
-writecsv.writerow(b)
-writecsv.writerow(c)
-writecsv.writerow(d)
-writecsv.writerow(e)
-csvfile.close()
-"""
-#############################################################
+csvfile = open('Drift_Panel-Mesh_Frame_Height_5384_side_1.csv', 'wb')
 shifter=sheet.cell(11,0).value
 EQID=int(sheet.cell(5,0).value)
 date=sheet.cell(8,0).value
+position=sheet.cell(14,0).value
 datetuple=xlrd.xldate_as_tuple(date,workbook.datemode)
 fdate=datetime(*datetuple) #convert date in datetime type
 fdate=fdate.strftime("%Y-%m-%d %H:%M:%S") #date to str
 print "shifter, EQID,date",shifter,EQID,type(shifter),fdate
 resstr=""
-resstr+=";".join(['MEASSITEHASH','EQENTRYID','CONTEXTNAME','MEASVALUE','PERCENTAGEMEAS','ISVALIDFLAG','INDEXHASH','MEASTIME','SHIFTER','WEBSITEUSERCR']) +"\n"
-resstr+=";".join(["",str(EQID),'DP_MESH_FR_HEIGHT_MIN_DT',str(sheet.cell(33,1).value),"","T",'skfh_1',fdate,shifter,'ggiakous']) +"\n"
-resstr+=";".join(["",str(EQID),'DP_MESH_FR_HEIGHT_MAX_DT',str(sheet.cell(33,3).value),"","T",'skfh_1',fdate,shifter,'ggiakous']) +"\n"
-resstr+=";".join(["",str(EQID),'DP_MESH_FR_HEIGHT_AVG_DT',str(sheet.cell(33,5).value),"","T",'skfh_1',fdate,shifter,'ggiakous']) +"\n"
-resstr+=";".join(["",str(EQID),'DP_MESH_FR_HEIGHT_RMS_DT',str(sheet.cell(33,7).value),"","T",'skfh_1',fdate,shifter,'ggiakous'])
+resstr+=";".join(['MEASSITEHASH','EQENTRYID','CONTEXTNAME','POSITION','MEASVALUE','PERCENTAGEMEAS','ISVALIDFLAG','INDEXHASH','MEASTIME','SHIFTER','WEBSITEUSERCR']) +"\n"
+resstr+=";".join(["",str(EQID),'DP_MESH_FR_HEIGHT_MIN_DT',position,str(sheet.cell(33,1).value),"","T",'skfh_1',fdate,shifter,'ggiakous']) +"\n"
+resstr+=";".join(["",str(EQID),'DP_MESH_FR_HEIGHT_MAX_DT',position,str(sheet.cell(33,3).value),"","T",'skfh_1',fdate,shifter,'ggiakous']) +"\n"
+resstr+=";".join(["",str(EQID),'DP_MESH_FR_HEIGHT_AVG_DT',position,str(sheet.cell(33,5).value),"","T",'skfh_1',fdate,shifter,'ggiakous']) +"\n"
+resstr+=";".join(["",str(EQID),'DP_MESH_FR_HEIGHT_RMS_DT',position,str(sheet.cell(33,7).value),"","T",'skfh_1',fdate,shifter,'ggiakous'])
 
 
 csvfile.write(resstr)

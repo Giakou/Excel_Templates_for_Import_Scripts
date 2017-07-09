@@ -1,0 +1,5 @@
+o MESSAGE: 5.03, TO_TIMESTAMP -2017-06-03 11:00:00, YYYY-MM-DD HH24:MI:SS-, ggiakous, , ggiakous, Giannis, T, DP_MESH_FR_HEIGHT_MIN_DT, 5384, skfh_1 inserted
+o MESSAGE: 5.08, TO_TIMESTAMP -2017-06-03 11:00:00, YYYY-MM-DD HH24:MI:SS-, ggiakous, , ggiakous, Giannis, T, DP_MESH_FR_HEIGHT_MAX_DT, 5384, skfh_1 inserted
+o MESSAGE: 5.055, TO_TIMESTAMP -2017-06-03 11:00:00, YYYY-MM-DD HH24:MI:SS-, ggiakous, , ggiakous, Giannis, T, DP_MESH_FR_HEIGHT_AVG_DT, 5384, skfh_1 inserted
+o MESSAGE: 0.013, TO_TIMESTAMP -2017-06-03 11:00:00, YYYY-MM-DD HH24:MI:SS-, ggiakous, , ggiakous, Giannis, T, DP_MESH_FR_HEIGHT_RMS_DT, 5384, skfh_1 inserted
+o MESSAGE: auth: !!! COMMIT +++++ COMMIT +++++ COMMIT +++++ COMMIT +++++ COMMIT +++++ COMMIT !!!
