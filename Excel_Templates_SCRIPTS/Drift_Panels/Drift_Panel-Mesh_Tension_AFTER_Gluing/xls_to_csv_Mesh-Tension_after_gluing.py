@@ -24,11 +24,11 @@ fdate=datetime(*datetuple) #convert date in datetime type
 fdate=fdate.strftime("%Y-%m-%d %H:%M:%S") #date to str
 print "shifter, EQID,date",shifter,EQID,type(shifter),fdate
 resstr=""
-resstr+=";".join(['MEASSITEHASH','EQENTRYID','CONTEXTNAME','MEASVALUE','PERCENTAGEMEAS','ISVALIDFLAG','INDEXHASH','MEASTIME','SHIFTER','WEBSITEUSERCR','MEASCOMMENT','MEASCOMMENTTYPE','EQCOMMENT','EQCOMMENTTYPE']) +"\n"
-resstr+=";".join(["",str(EQID),'MESH_TENS_AG_MIN_DT',str(sheet.cell(13,9).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype]) +"\n"
-resstr+=";".join(["",str(EQID),'MESH_TENS_AG_MAX_DT',str(sheet.cell(13,11).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype]) +"\n"
-resstr+=";".join(["",str(EQID),'MESH_TENS_AG_AVG_DT',str(sheet.cell(13,13).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype]) +"\n"
-resstr+=";".join(["",str(EQID),'MESH_TENS_AG_RMS_DT',str(sheet.cell(13,15).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype])
+resstr+=";".join(['MEASSITEHASH','EQENTRYID','CONTEXTNAME','MEASVALUE','PERCENTAGEMEAS','ISVALIDFLAG','INDEXHASH','MEASTIME','SHIFTER','WEBSITEUSERCR','MEASCOMMENT','MEASCOMMENTTYPE','EQCOMMENT','EQCOMMENTTYPE','POSITION']) +"\n"
+resstr+=";".join(["",str(EQID),'MESH_TENS_AG_MIN_DT',str(sheet.cell(13,9).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype,position]) +"\n"
+resstr+=";".join(["",str(EQID),'MESH_TENS_AG_MAX_DT',str(sheet.cell(13,11).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype,position]) +"\n"
+resstr+=";".join(["",str(EQID),'MESH_TENS_AG_AVG_DT',str(sheet.cell(13,13).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype,position]) +"\n"
+resstr+=";".join(["",str(EQID),'MESH_TENS_AG_RMS_DT',str(sheet.cell(13,15).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype,position])
 
 
 csvfile.write(resstr)

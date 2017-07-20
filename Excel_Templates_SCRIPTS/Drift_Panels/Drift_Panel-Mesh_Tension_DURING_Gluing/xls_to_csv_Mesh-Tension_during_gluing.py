@@ -1,9 +1,20 @@
 import xlrd
 from datetime import datetime
-
-workbook =  xlrd.open_workbook('Drift_Panel-Mesh_Tension_DURING_Gluing_5383.xls')
+#1) Excel_Measurements_Playground -> Save the excel file in the Playground dir
+#2) Excel_Measurements_Construction -> Save the excel file in the Construction dir
+#3) The directories are identical
+#4) CSV_files_Playground -> Save the data in csv form in the Playground dir
+#5) CSV_files_Construction -> Save the data in csv form in the Construction dir
+#6) The directories are identical
+#7) Don't forget to change the name of the excel and csv files by adding "_eqentryid" before the .xls or .csv
+workbook =  xlrd.open_workbook('/home/atlas-auth/Programs/ATLAS_NSW_AUTH_IMPORT_SCRIPTS/Excel_Measurements_Playground/Drift_Panels/Drift_Panel-Mesh_Tension_DURING_Gluing/Drift_Panel-Mesh_Tension_DURING_Gluing.xls')
 sheet = workbook.sheet_by_name('Sheet1')
-csvfile = open('Drift_Panel-Mesh_Tension_DURING_Gluing_5383.csv', 'wb')
+csvfile = open('/home/atlas-auth/Programs/ATLAS_NSW_AUTH_IMPORT_SCRIPTS/CSV_files_Playground/Drift_Panels/Drift_Panel-Mesh_Tension_DURING_Gluing/Drift_Panel-Mesh_Tension_DURING_Gluing.csv', 'wb')
+meascomment=sheet.cell(14,0).value
+meascommenttype=sheet.cell(17,0).value
+eqcomment=sheet.cell(20,0).value
+eqcommenttype=sheet.cell(23,0).value
+position=sheet.cell(26,0).value
 shifter=sheet.cell(11,0).value
 EQID=int(sheet.cell(5,0).value)
 date=sheet.cell(8,0).value
@@ -12,11 +23,11 @@ fdate=datetime(*datetuple) #convert date in datetime type
 fdate=fdate.strftime("%Y-%m-%d %H:%M:%S") #date to str
 print "shifter, EQID,date",shifter,EQID,type(shifter),fdate
 resstr=""
-resstr+=";".join(['MEASSITEHASH','EQENTRYID','CONTEXTNAME','MEASVALUE','PERCENTAGEMEAS','ISVALIDFLAG','INDEXHASH','MEASTIME','SHIFTER','WEBSITEUSERCR']) +"\n"
-resstr+=";".join(["",str(EQID),'MESH_TENS_DG_MIN_DT',str(sheet.cell(22,7).value),"","T",'skfh_1',fdate,shifter,'ggiakous']) +"\n"
-resstr+=";".join(["",str(EQID),'MESH_TENS_DG_MAX_DT',str(sheet.cell(22,9).value),"","T",'skfh_1',fdate,shifter,'ggiakous']) +"\n"
-resstr+=";".join(["",str(EQID),'MESH_TENS_DG_AVG_DT',str(sheet.cell(22,11).value),"","T",'skfh_1',fdate,shifter,'ggiakous']) +"\n"
-resstr+=";".join(["",str(EQID),'MESH_TENS_DG_RMS_DT',str(sheet.cell(22,13).value),"","T",'skfh_1',fdate,shifter,'ggiakous'])
+resstr+=";".join(['MEASSITEHASH','EQENTRYID','CONTEXTNAME','MEASVALUE','PERCENTAGEMEAS','ISVALIDFLAG','INDEXHASH','MEASTIME','SHIFTER','WEBSITEUSERCR','MEASCOMMENT','MEASCOMMENTTYPE','EQCOMMENT','EQCOMMENTTYPE','POSITION']) +"\n"
+resstr+=";".join(["",str(EQID),'MESH_TENS_DG_MIN_DT',str(sheet.cell(13,9).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype,position]) +"\n"
+resstr+=";".join(["",str(EQID),'MESH_TENS_DG_MAX_DT',str(sheet.cell(13,11).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype,position]) +"\n"
+resstr+=";".join(["",str(EQID),'MESH_TENS_DG_AVG_DT',str(sheet.cell(13,13).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype,position]) +"\n"
+resstr+=";".join(["",str(EQID),'MESH_TENS_DG_RMS_DT',str(sheet.cell(13,15).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype,position])
 
 
 csvfile.write(resstr)
