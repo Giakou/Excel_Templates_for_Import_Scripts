@@ -8,9 +8,9 @@ from datetime import datetime
 #5) CSV_files_Construction -> Save the data in csv form in the Construction dir
 #6) The directories are identical
 #7) Don't forget to change the name of the excel and csv files by adding "_eqentryid" before the .xls or .csv
-workbook =  xlrd.open_workbook('/home/atlas-auth/Programs/ATLAS_NSW_AUTH_IMPORT_SCRIPTS/Excel_Measurements_Playground/Drift_Panels/Drift_Panel-Mesh_Frame_Height/Drift_Panel-Mesh_Frame_Height_5383.xls')
+workbook =  xlrd.open_workbook('/home/atlas-auth/Programs/ATLAS_NSW_AUTH_IMPORT_SCRIPTS/Excel_Measurements_Playground/Drift_Panels/Drift_Panel-Checks/Drift_Panel-Interconnection_Height/Drift_Panels-Interconnections_Height.xls')
 sheet = workbook.sheet_by_name('Sheet1')
-csvfile = open('/home/atlas-auth/Programs/ATLAS_NSW_AUTH_IMPORT_SCRIPTS/CSV_files_Playground/Drift_Panels/Drift_Panel-Mesh_Frame_Height/Drift_Panel-Mesh_Frame_Height_5383.csv', 'wb')
+csvfile = open('/home/atlas-auth/Programs/ATLAS_NSW_AUTH_IMPORT_SCRIPTS/CSV_files_Playground/Drift_Panels/Drift_Panel-Checks/Drift_Panel-Interconnection_Height/Drift_Panels-Interconnections_Height.csv', 'wb')
 meascomment=sheet.cell(14,0).value
 meascommenttype=sheet.cell(17,0).value
 eqcomment=sheet.cell(20,0).value
@@ -25,10 +25,8 @@ fdate=fdate.strftime("%Y-%m-%d %H:%M:%S") #date to str
 print "shifter, EQID,date",shifter,EQID,type(shifter),fdate
 resstr=""
 resstr+=";".join(['MEASSITEHASH','EQENTRYID','CONTEXTNAME','POSITION','MEASVALUE','PERCENTAGEMEAS','ISVALIDFLAG','INDEXHASH','MEASTIME','SHIFTER','WEBSITEUSERCR','MEASCOMMENT','MEASCOMMENTTYPE','EQCOMMENT','EQCOMMENTTYPE']) +"\n"
-resstr+=";".join(["",str(EQID),'DP_MESH_FR_HEIGHT_MIN_DT',position,str(sheet.cell(33,2).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype]) +"\n"
-resstr+=";".join(["",str(EQID),'DP_MESH_FR_HEIGHT_MAX_DT',position,str(sheet.cell(33,4).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype]) +"\n"
-resstr+=";".join(["",str(EQID),'DP_MESH_FR_HEIGHT_AVG_DT',position,str(sheet.cell(33,6).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype]) +"\n"
-resstr+=";".join(["",str(EQID),'DP_MESH_FR_HEIGHT_RMS_DT',position,str(sheet.cell(33,8).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype])
+resstr+=";".join(["",str(EQID),'DP_INT_HEIGHT_VALUE_DT',position,str(sheet.cell(22,5).value),"","T",'skfh_1',fdate,shifter,'ggiakous',meascomment,meascommenttype,eqcomment,eqcommenttype])
+
 
 
 csvfile.write(resstr)

@@ -8,9 +8,9 @@ from datetime import datetime
 #5) CSV_files_Construction -> Save the data in csv form in the Construction dir
 #6) The directories are identical
 #7) Don't forget to change the name of the excel and csv files by adding "_eqentryid" before the .xls or .csv
-workbook =  xlrd.open_workbook('/home/atlas-auth/Programs/ATLAS_NSW_AUTH_IMPORT_SCRIPTS/Excel_Measurements_Playground/Drift_Panels/Drift_Panel-Mesh_Tension_AFTER_Gluing/Drift_Panel-Mesh_Tension_AFTER_Gluing.xls')
+workbook =  xlrd.open_workbook('/home/atlas-auth/Programs/ATLAS_NSW_AUTH_IMPORT_SCRIPTS/Excel_Measurements_Playground/Drift_Panels/Drift_Panel-Mesh_Tension_AFTER_Gluing/Drift_Panel-Mesh_Tension_AFTER_Gluing_5384.xls')
 sheet = workbook.sheet_by_name('Sheet1')
-csvfile = open('/home/atlas-auth/Programs/ATLAS_NSW_AUTH_IMPORT_SCRIPTS/CSV_files_Playground/Drift_Panels/Drift_Panel-Mesh_Tension_AFTER_Gluing/Drift_Panel-Mesh_Tension_AFTER_Gluing.csv', 'wb')
+csvfile = open('/home/atlas-auth/Programs/ATLAS_NSW_AUTH_IMPORT_SCRIPTS/CSV_files_Playground/Drift_Panels/Drift_Panel-Mesh_Tension_AFTER_Gluing/Drift_Panel-Mesh_Tension_AFTER_Gluing_5384.csv', 'wb')
 meascomment=sheet.cell(14,0).value
 meascommenttype=sheet.cell(17,0).value
 eqcomment=sheet.cell(20,0).value
